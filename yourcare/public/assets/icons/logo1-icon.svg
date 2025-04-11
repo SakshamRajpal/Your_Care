@@ -1,0 +1,23 @@
+<svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .yourcare-text {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 36px;
+      fill: white;
+      font-weight: bold;
+    }
+  </style>
+
+  <!-- Caduceus-style Symbol -->
+  <g transform="scale(1.5) translate(10, 5)">
+    <circle cx="30" cy="5" r="4" fill="#f89c5e"/>
+    <line x1="30" y1="8" x2="30" y2="36" stroke="#5ecfff" stroke-width="2"/>
+    <path d="M30 14 Q24 18 30 22 Q36 26 30 30" stroke="#fdd86e" fill="none" stroke-width="2"/>
+    <path d="M30 14 Q36 18 30 22 Q24 26 30 30" stroke="#fdd86e" fill="none" stroke-width="2"/>
+    <path d="M26 5 Q20 0 18 4 Q25 8 26 5" fill="#a3dd6f"/>
+    <path d="M34 5 Q40 0 42 4 Q35 8 34 5" fill="#a3dd6f"/>
+  </g>
+
+  <!-- Text -->
+  <text x="90" y="55" class="yourcare-text">YourCare</text>
+</svg>

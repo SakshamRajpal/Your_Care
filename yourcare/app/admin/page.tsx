@@ -7,14 +7,24 @@ import { DataTable } from "@/components/table/DataTable";
 import { getRecentAppointmentList } from "@/lib/actions/appointment.actions";
 
 const AdminPage = async () => {
+  // const appointments = await getRecentAppointmentList();
+
   const appointments = await getRecentAppointmentList();
+
+// Optional fallback object
+const safeAppointments = appointments ?? {
+  scheduledCount: 0,
+  pendingCount: 0,
+  cancelledCount: 0,
+  documents: [],
+};
 
   return (
     <div className="mx-auto flex max-w-7xl flex-col space-y-14">
       <header className="admin-header">
         <Link href="/" className="cursor-pointer">
           <Image
-            src="/assets/icons/yourcare-logo.svg"
+            src="/assets/icons/logo1-icon.svg"
             height={32}
             width={1000}
             alt="logo"
@@ -34,27 +44,27 @@ const AdminPage = async () => {
         </section>
 
         <section className="admin-stat">
-          <StatCard
-            type="appointments"
-            count={appointments.scheduledCount}
-            label="Scheduled appointments"
-            icon={"/assets/icons/appointments.svg"}
-          />
-          <StatCard
-            type="pending"
-            count={appointments.pendingCount}
-            label="Pending appointments"
-            icon={"/assets/icons/pending.svg"}
-          />
-          <StatCard
-            type="cancelled"
-            count={appointments.cancelledCount}
-            label="Cancelled appointments"
-            icon={"/assets/icons/cancelled.svg"}
-          />
+        <StatCard
+  type="appointments"
+  count={safeAppointments.scheduledCount}
+  label="Scheduled appointments"
+  icon={"/assets/icons/appointments.svg"}
+/>
+<StatCard
+  type="pending"
+  count={safeAppointments.pendingCount}
+  label="Pending appointments"
+  icon={"/assets/icons/pending.svg"}
+/>
+<StatCard
+  type="cancelled"
+  count={safeAppointments.cancelledCount}
+  label="Cancelled appointments"
+  icon={"/assets/icons/cancelled.svg"}
+/>
         </section>
 
-        <DataTable columns={columns} data={appointments.documents} />
+        <DataTable columns={columns} data={safeAppointments.documents} />
       </main>
     </div>
   );
