@@ -2,13 +2,13 @@
 
 ![Dashboard Screenshot](https://github.com/user-attachments/assets/84b7ce10-958a-410a-82ec-c5d23cfece63)
 
-## 🤖 Introducing "YourCare"
+## 🤖 Introducing "YourCare":
 
 **YourCare** is a healthcare patient management application that allows patients to easily register, book, and manage their appointments with doctors. It features administrative tools for scheduling, confirming, and canceling appointments, along with SMS notifications — all built using **Next.js**.
 
 ---
 
-## ⚙️ Tech Stack
+## ⚙️ Tech Stack:
 
 - **Next.js**
 - **Appwrite**
@@ -20,7 +20,7 @@
 
 ---
 
-## 🔋 Features
+## 🔋 Features:
 
 ### 👉 Register as a Patient
 Users can sign up and create a personal profile as a patient.
@@ -87,7 +87,7 @@ And many more — including optimized code architecture and component reusabilit
 
 ---
 
-## 🤸 Quick Start
+## 🤸 Quick Start:
 
 Follow these steps to get the project running locally.
 
@@ -99,17 +99,20 @@ Ensure you have the following installed:
 - npm (Node Package Manager)
 
 ### 📦 Clone the Repository
-
 ```bash
 git clone https://github.com/SakshamRajpal/Your_Care.git
 cd Your_Care
+```
 
 
-📥 Install Dependencies
+### 📥 Install Dependencies
+```bash
 npm install
+```
 
-🔐 Set Up Environment Variables
-Create a .env.local file in the root directory:
+### 🔐 Set Up Environment Variables
+- Create a .env.local file in the root directory:
+```bash
 # APPWRITE
 NEXT_PUBLIC_ENDPOINT=https://cloud.appwrite.io/v1
 PROJECT_ID=
@@ -121,12 +124,21 @@ NEXT_PUBLIC_BUCKET_ID=
 NEXT_PUBLIC_ADMIN_PASSKEY=123456
 NEXT_SENTRY_AUTH=
 Replace the placeholders with your actual Appwrite credentials.
+```
 
-▶️ Run the Development Server
+###  ▶️ Run the Development Server
+```bash
 npm run dev
+```
 Visit http://localhost:3000 in your browser.
 
-Made with ❤️ using Next.js and Appwrite
+---
 
-Let me know if you want to add sections like "Contributing", "License", or "Demo Video"!
+## 🤝 Contributing:
+
+- Found a bug or want to contribute?
+- Feel free to fork the repo, make changes, and open a pull request.
+- ⭐ If you like this project, consider giving it a star!
+
+
 
